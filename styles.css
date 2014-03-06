@@ -1,0 +1,42 @@
+html{
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 80%;
+<<<<<<< HEAD
+	max-width: 1200px;
+=======
+>>>>>>> 465033cff200b8330c284f9d7752551e06142271
+	margin: auto;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+#myTextarea{
+	width: 100%;
+<<<<<<< HEAD
+	border: solid gray 1px;
+	border-radius: 5px;
+}
+input[type=button]{
+	background-color: #fff;
+	border: solid #aaa 1px;
+	border-radius: 5px;
+	font-size: 1.1rem;
+}
+input[type=button]:hover{
+	background-color: #ddd;
+	border: solid #666 1px;
+=======
+>>>>>>> 465033cff200b8330c284f9d7752551e06142271
+}
+@media screen and (min-width: 1024px){
+	#indiv{
+		float: left;
+		display: inline-block;
+		width: 40%;
+	}
+	#outdiv{
+		display: inline-block;
+		margin-left: 10%;
+		width: 40%;
+	}
+}
