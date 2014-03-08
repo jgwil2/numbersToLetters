@@ -1,10 +1,7 @@
 html{
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	width: 80%;
-<<<<<<< HEAD
 	max-width: 1200px;
-=======
->>>>>>> 465033cff200b8330c284f9d7752551e06142271
 	margin: auto;
 }
 h1,h2,h3,h4,h5,h6{
@@ -12,7 +9,6 @@ h1,h2,h3,h4,h5,h6{
 }
 #myTextarea{
 	width: 100%;
-<<<<<<< HEAD
 	border: solid gray 1px;
 	border-radius: 5px;
 }
@@ -25,8 +21,6 @@ input[type=button]{
 input[type=button]:hover{
 	background-color: #ddd;
 	border: solid #666 1px;
-=======
->>>>>>> 465033cff200b8330c284f9d7752551e06142271
 }
 @media screen and (min-width: 1024px){
 	#indiv{

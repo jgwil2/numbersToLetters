@@ -3,7 +3,6 @@ function parseText(userInput){
 	for (var i = 0; i < userInputArray.length; i++) {
 		var pattern = new RegExp("^['\"]?[0-9]+[,;:!?./'\"\n\-]?$"); // numbers only, no other characters (update for decimal numbers later?)
 		if(pattern.test(userInputArray[i])){
-			// alert("matched " + userInputArray[i] + " !"); // filler code to make sure regex works
 			userInputArray[i] = numbersToLetters(userInputArray[i]); // call numbers to letters conversion function and store its return in array
 		}
 	}
@@ -15,8 +14,8 @@ function parseText(userInput){
 	}
 	else{
 		var outPut = document.createElement('p'); // if there is no content, then create the element and add to the body
-		outPut.id = "output";
-		document.getElementById('outdiv').appendChild(outPut);
+		outPut.id = "output"; // assign id "output"
+		document.getElementById('outdiv').appendChild(outPut); // append "output" to "outdiv"
 	}
 	
 	var textOut = document.createTextNode(userOut); // create text to output
@@ -31,16 +30,16 @@ function numbersToLetters(numb){
 	var numbArray = numb.split(''); // split number into array
 
 	if(isNaN(numbArray[numbArray.length - 1])){
-		punctAfter = numbArray[numbArray.length - 1]; // if the last element in the array is not a number, store in punctuation
+		punctAfter = numbArray[numbArray.length - 1]; // if the last element in the array is not a number, store in punctuation after number
 		numbArray.pop(); // delete last element from array
 	}
 
 	if(isNaN(numbArray[0])){
-		punctBefore = numbArray[0];
-		numbArray.shift();
+		punctBefore = numbArray[0]; // if the first element in the array is not a number, store in punctuation before number
+		numbArray.shift(); // delete firs element from array
 	}
 
-	numb = numbArray.join();
+	numb = numbArray.join(''); // convert array back to string
 
 	var onesToLetters = ['','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'],
 	tensToLetters = ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
@@ -62,7 +61,6 @@ function numbersToLetters(numb){
 		}
 
 		if(tens > 1){
-<<<<<<< HEAD
 			numbToLet += (hundreds > 0 ? ' ' : '') + tensToLetters[tens] + (ones > 0 ? '-' + onesToLetters[ones] : ''); // if the tens column has value of 2 or more, print corresponding word ('twenty' - 'ninety') and if ones column is greater than 0, print hyphen + word ('one' - 'nine')
 		}
 		else if(tens > 0){
@@ -70,15 +68,6 @@ function numbersToLetters(numb){
 		}
 		else{
 			numbToLet += (hundreds > 0 ? ' ' : '') + onesToLetters[ones]; // if the tens column is 0, print just word 'one' - 'nine' (this line added to avoid undefined 'tens')
-=======
-			numbToLet += ' ' + tensToLetters[tens] + (ones > 0 ? '-' + onesToLetters[ones] : ''); // if the tens column has value of 2 or more, print corresponding word ('twenty' - 'ninety') and if ones column is greater than 0, print hyphen + word ('one' - 'nine')
-		}
-		else if(tens > 0){
-			numbToLet += ' ' + onesToLetters[tens + '' + ones]; // if the tens column is 1, print words 'ten' - 'nineteen'
-		}
-		else{
-			numbToLet += ' ' + onesToLetters[ones]; // if the tens column is 0, print just word 'one' - 'nine' (this line added to avoid undefined 'tens')
->>>>>>> 465033cff200b8330c284f9d7752551e06142271
 		}
 	}
 	else if(numb == 0){
@@ -86,17 +75,14 @@ function numbersToLetters(numb){
 	}
 	else{
 		numbToLet = numb; // if the number is outside of 0-999 range, return as is
-<<<<<<< HEAD
 	}
 
 	if(punctAfter !== null){
-		numbToLet += punctAfter;
-=======
->>>>>>> 465033cff200b8330c284f9d7752551e06142271
+		numbToLet += punctAfter; // if punctuation after number is not null, concatenate after number
 	}
 
 	if(punctBefore !== null){
-		numbToLet = punctBefore + numbToLet;
+		numbToLet = punctBefore + numbToLet; // if punctuation before number is not null concatenate before number
 	}
 	return numbToLet;
 }
