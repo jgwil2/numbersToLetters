@@ -36,7 +36,7 @@ function numbersToLetters(numb){
 
 	if(isNaN(numbArray[0])){
 		punctBefore = numbArray[0]; // if the first element in the array is not a number, store in punctuation before number
-		numbArray.shift(); // delete firs element from array
+		numbArray.shift(); // delete first element from array
 	}
 
 	numb = numbArray.join(''); // convert array back to string
